@@ -1,0 +1,34 @@
+:root {
+  --brand: #F2541B; --brand-text: #C23A0C; --canvas: #FFF8F3; --surface: #FFFFFF;
+  --text: #1A1714; --text-2: #5E534C; --divider: #F0E3D9; --office: #1F2A5C;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --brand: #FF7440; --brand-text: #FF8A5C; --canvas: #14110F; --surface: #211C19;
+          --text: #F6F0EA; --text-2: #B3A79E; --divider: #302924; --office: #A9B5EE; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--text);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif; }
+a { color: var(--brand-text); }
+.top { max-width: 760px; margin: 0 auto; padding: 20px 16px; display: flex; flex-wrap: wrap; gap: 12px 24px;
+  align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text);
+  font: 700 20px/1 ui-rounded, -apple-system, sans-serif; }
+.brand img { border-radius: 8px; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 15px; }
+nav a { text-decoration: none; color: var(--text-2); }
+nav a[aria-current=page] { color: var(--brand-text); font-weight: 600; }
+nav .lang { border: 1px solid var(--divider); border-radius: 999px; padding: 0 10px; }
+main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+h1 { font: 800 clamp(30px, 6vw, 40px)/1.15 ui-rounded, -apple-system, sans-serif; margin: 16px 0 8px; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+.meta { color: var(--text-2); font-size: 15px; margin: 0 0 24px; }
+.card { background: var(--surface); border-radius: 20px; padding: 20px 22px; margin: 20px 0; }
+.card p:first-child { margin-top: 0; } .card p:last-child { margin-bottom: 0; }
+ul { padding-left: 1.2em; } li { margin: 6px 0; }
+.hero p { font-size: 19px; color: var(--text-2); }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; padding: 0; list-style: none; }
+.links a { display: block; background: var(--surface); border-radius: 16px; padding: 16px 18px; text-decoration: none; font-weight: 600; }
+footer { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; color: var(--text-2); font-size: 14px;
+  border-top: 1px solid var(--divider); }
